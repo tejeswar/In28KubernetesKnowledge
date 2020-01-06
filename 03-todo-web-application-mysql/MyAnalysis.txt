@@ -1,0 +1,4 @@
+I am able to run the application in the local with the docker-compose up.
+
+But when I am deploying it onto the Kubernetes,then java application is not able to connect to the mysql.
+
