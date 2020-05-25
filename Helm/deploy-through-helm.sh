@@ -1,0 +1,1 @@
+helm install ./api-gateway/ --name=api-gateway-service1

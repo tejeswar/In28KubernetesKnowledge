@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  hello-world-rest-api:
+    image: tesahu/hello-world-rest-api:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    restart: always
+   
+
+
+
+

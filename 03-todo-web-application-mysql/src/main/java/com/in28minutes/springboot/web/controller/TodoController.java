@@ -10,6 +10,7 @@ import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -79,6 +80,7 @@ public class TodoController {
 		return "todo";
 	}
 
+	@Transactional
 	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
 	public String updateTodo(ModelMap model, @Valid Todo todo,
 			BindingResult result) {
@@ -90,7 +92,9 @@ public class TodoController {
 		todo.setUser(getLoggedInUserName(model));
 
 		repository.save(todo);
+		repository.saveAndFlush(todo);
 		//service.updateTodo(todo);
+	
 
 		return "redirect:/list-todos";
 	}

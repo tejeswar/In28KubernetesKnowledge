@@ -1,12 +1,24 @@
-03-todo-web-application-mysql/.settings
-03-todo-web-application-mysql/target
-03-todo-web-application-mysql/.classpath
-03-todo-web-application-mysql/.project
+.DS_Store
+.metadata
+ 
+**/.DS_Store
 **/.metadata
+ 
+#individual project level
+**/target
+**/bin
+**/*.jar
+**/*.war
+**/*.zip
+**/node_modules
+**/.mvn
+ 
+**/maven
+**/m2
+ 
+ 
+**/.settings
+**/.classpath
+**/.project
 
 
-
-
-**/04-currency-exchange-microservice-basic
-**/05-currency-conversion-microservice-basic
-**/06-currency-conversion-microservice-cloud

@@ -1,0 +1,14 @@
+#version: '2.1'
+version: '2'
+
+services:
+  todo-web-application-h2:
+    image: tesahu/todo-web-application-h2:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    restart: always
+   
+
+
+
+

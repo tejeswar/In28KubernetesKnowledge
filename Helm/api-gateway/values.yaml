@@ -1,0 +1,6 @@
+image: tesahu/api-gateway:4.0
+port: 8765
+servicetype: LoadBalancer
+replicas: 1
+#replicas: 2
+name: api-gateway

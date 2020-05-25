@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Version;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -16,6 +17,8 @@ public class Todo {
 	private int id;
     
 	private String user;
+	@Version
+	private Integer version;
     
     @Size(min=10, message="Enter at least 10 Characters...")
     @Column(name="description")
@@ -78,8 +81,18 @@ public class Todo {
     public void setDone(boolean isDone) {
         this.isDone = isDone;
     }
+    
+    
 
-    @Override
+    public Integer getVersion() {
+		return version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
+	@Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;
